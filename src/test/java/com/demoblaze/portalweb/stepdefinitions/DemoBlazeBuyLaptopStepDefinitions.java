@@ -1,10 +1,9 @@
 package com.demoblaze.portalweb.stepdefinitions;
 
 import com.demoblaze.portalweb.questions.DemoBlazeMainQuestion;
+import com.demoblaze.portalweb.questions.LaptopsDellCategoriesQuestion;
 import com.demoblaze.portalweb.tasks.browser.NavigateDemoBlazeTask;
-import com.demoblaze.portalweb.tasks.main.CategoriesDemoBlazeTask;
-import com.demoblaze.portalweb.tasks.main.LaptopsCategoriesDemoBlazeTask;
-import com.demoblaze.portalweb.tasks.main.TheMainPageDemoBlazeTask;
+import com.demoblaze.portalweb.tasks.main.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -44,9 +43,11 @@ public class DemoBlazeBuyLaptopStepDefinitions {
 
     @Then("^User validates if is selectioned mark$")
     public void userValidatesIfIsSelectionedMark() {
+        userDemoBlaze.attemptsTo(VerificationLaptopsCategoriesDemoBlazeTask.isVerified(hisBrowser));
     }
 
     @Then("^User adds to cart the new laptop$")
     public void userAddsToCartTheNewLaptop() {
+        userDemoBlaze.attemptsTo(AddCartLaptopsDemoBlazeTask.addCart(hisBrowser));
     }
 }
