@@ -2,6 +2,8 @@ package com.demoblaze.portalweb.stepdefinitions;
 
 import com.demoblaze.portalweb.questions.DemoBlazeMainQuestion;
 import com.demoblaze.portalweb.tasks.browser.NavigateDemoBlazeTask;
+import com.demoblaze.portalweb.tasks.main.CategoriesDemoBlazeTask;
+import com.demoblaze.portalweb.tasks.main.LaptopsCategoriesDemoBlazeTask;
 import com.demoblaze.portalweb.tasks.main.TheMainPageDemoBlazeTask;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -32,10 +34,12 @@ public class DemoBlazeBuyLaptopStepDefinitions {
 
     @When("^User choose categories laptops$")
     public void userChooseCategoriesLaptops() {
+        userDemoBlaze.attemptsTo(CategoriesDemoBlazeTask.chooseCategory(hisBrowser));
     }
 
     @When("^User chooses a new laptop mark Dell$")
     public void userChoosesANewLaptopMarkDell() {
+        userDemoBlaze.attemptsTo(LaptopsCategoriesDemoBlazeTask.isLaptopsChoose(hisBrowser));
     }
 
     @Then("^User validates if is selectioned mark$")

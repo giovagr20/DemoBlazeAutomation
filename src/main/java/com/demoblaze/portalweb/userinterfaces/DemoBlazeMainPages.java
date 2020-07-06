@@ -10,5 +10,7 @@ public class DemoBlazeMainPages extends PageObject {
             .located(By.id("cat"));
     public static final Target BTN_LAPTOPS = Target.the("LAPTOPS CATEGORIES")
             .located(By.id("itemc"));
+    public static final Target REF_LAPTOP = Target.the("DELL I7 LAPTOP")
+            .located(By.xpath("/html[1]/body[1]/div[5]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/h4[1]/a[1]"));
 
 }

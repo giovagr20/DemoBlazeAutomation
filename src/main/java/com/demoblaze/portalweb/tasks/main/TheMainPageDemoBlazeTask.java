@@ -20,7 +20,7 @@ public class TheMainPageDemoBlazeTask implements Task {
         if (!isTheMainPage){
             actor.wasAbleTo(TheMainPageDemoBlazeTask.theMainPage(hisBrowser));
         }
-
+        return;
     }
 
     public static TheMainPageDemoBlazeTask theMainPage(WebDriver hisBrowser){
